@@ -25,7 +25,8 @@ class Example(QWidget):
         self.setGeometry(300, 300, 280, 170)
         self.setWindowTitle('QProgressBar')
         self.show()
-    # 每个QObject类和它的子类都有timerEvent()事件处理函数用于处理定时事件。为了对定时器事件作出反馈，我们重新实现了这个事件处理函数。
+    # 每个QObject类和它的子类都有timerEvent()事件处理函数用于处理定时事件。
+    # 为了对定时器事件作出反馈，我们重新实现了这个事件处理函数。
     def timerEvent(self, e):
 
         if self.step >= 100:
@@ -36,8 +37,8 @@ class Example(QWidget):
         self.step = self.step + 1
         self.pbar.setValue(self.step)
 
+    # 开始和停止定时器。
     def doAction(self):
-
         if self.timer.isActive():
             self.timer.stop()
             self.btn.setText('Start')
