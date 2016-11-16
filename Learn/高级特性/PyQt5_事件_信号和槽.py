@@ -23,7 +23,9 @@ class Example(QWidget):
         super().__init__()
         self.initUI()
     def initUI(self):
+        # LCDNumber
         lcd = QLCDNumber(self)     #创建LCD数字对象
+        # QSlider 水平滑动轴
         sld = QSlider(Qt.Horizontal,self)  #创建水平滑动轴对象
 
         vbox = QVBoxLayout()   #创建垂直盒子布局
